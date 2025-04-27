@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "SecureVault Password Manager",
+  "version": "1.0",
+  "description": "Access your saved passwords from the iOS app.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icons.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://192.168.18.160:5002/*"
+  ]
+}

@@ -1,0 +1,212 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 320px;
+    background-color: #f4f6f8;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .logo {
+    display: block;
+    margin: 0 auto 10px;
+    width: 48px;
+    height: 48px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #0d47a1;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #1976d2;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #1565c0;
+  }
+  
+  .logout-btn {
+    background-color: #e53935;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c62828;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  li {
+    background: #ffffff;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    font-size: 14px;
+    word-break: break-word;
+  }
+  
+  .error {
+    color: #d32f2f;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .reload-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    background-color: transparent; /* Ensure no background */
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the image inside the button */
+    cursor: pointer;
+    padding: 0; /* Remove any default padding */
+    display: none; /* Hidden by default */
+  }
+  
+  .reload-btn img.reload-icon {
+    width: 25px; /* Adjust this size to fit the image inside the button */
+    height: 25px; /* Adjust this size to fit the image inside the button */
+  }
+  
+  .reload-btn:hover {
+    background-color: transparent; /* Ensure no hover effect */
+  }
+
+  .securevault-autofill-indicator {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 9999;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+  }
+
+  .securevault-autofill-indicator:hover {
+    transform: translateY(-50%) scale(1.2);
+  }
+
+  /* Add tooltip */
+  .securevault-autofill-indicator::after {
+    content: 'Autofilled by SecureVault';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    margin-right: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+  }
+
+  .securevault-autofill-indicator:hover::after {
+    opacity: 1;
+  }
+
+  .password-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .password-container input {
+    width: 100%;
+    padding-right: 40px; /* Space for the toggle button */
+  }
+
+  .toggle-password {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .toggle-password img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+  }
+
+  .toggle-password:hover img {
+    opacity: 1;
+  }
+
+  .password-toggle {
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    margin: 0 0 0 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  .password-toggle:hover {
+    opacity: 1;
+    background: transparent;
+  }
+
+  .password-toggle img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .password-text {
+    font-family: monospace;
+    letter-spacing: 1px;
+  }

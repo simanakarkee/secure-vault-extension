@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="login-section">
+      <img src="icons/icons.png" class="logo" alt="Securevault Logo" />
+      <h2>Securevault</h2>
+      <input type="text" id="username" placeholder="Username" />
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Password" />
+        <button type="button" id="toggle-password" class="toggle-password">
+          <img src="icons/eye.png" alt="Toggle password visibility" />
+        </button>
+      </div>
+      <button id="login-btn">Login</button>
+      <p id="login-error" class="error"></p>
+    </div>
+
+    <div id="passwords-section" style="display: none;">
+      <h2>Your Vault</h2>
+      <ul id="passwords-list"></ul>
+      <button id="logout-btn" class="logout-btn">Logout</button>
+      <button id="reload-btn" class="reload-btn">
+        <img src="icons/reload.png" alt="Reload" class="reload-icon" />
+      </button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
