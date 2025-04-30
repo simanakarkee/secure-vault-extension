@@ -24,5 +24,6 @@
     "tabs"
   ],
   "host_permissions": [
+    "http://100.64.209.193:5555/*"
   ]
 }

@@ -1,3 +1,4 @@
+const API_BASE_URL = "http://100.64.209.193:5555";
 
 // Password visibility toggle
 document.getElementById("toggle-password").addEventListener("click", function() {
